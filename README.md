@@ -1,11 +1,10 @@
-# Malaysia Public Transport Optimization
+# Malaysia Public Transport Ridership Analysis & Forecasting
 
-This project explores and analyzes public transport ridership data across Malaysia using Python and data science techniques. The project begins with data cleaning and exploratory analysis, then progresses through feature engineering, data reduction, and predictive modeling. 
-The final goal is to forecast ridership patterns and identify usage trends across different transport modes (MRT, LRT, buses, and national rails). Insights generated will be visualized using **Power BI dashboards** to assist policymakers, urban planners, and transport authorities in making informed, data-driven decisions for future transport planning, resource allocation, and service optimization.
+This project focuses on analysing and predicting Malaysia's public transport ridership data using Python and Data Science Techniques witha clear pipeline from Data Cleaning and Exploratory Data Analysis (EDA) to Predictive Modeling and Business Intelligence (BI) visualization. The ultimate goal is to discovered usage patterns across MRT, LRT, Monorail, Buses, National Rail and build a predictive model for urbain rail ridership. The generated insights are visualized in Power BI dashboards to support decision-making for transport policy and planning.
 
 ---
 
-## 📊 Dataset
+## 📊 Dataset Overview
 
 - **Source**: [[Custom ridership dataset of Malaysia’s public transport](https://data.gov.my/data-catalogue/ridership_headline)]
 - **Time Span**: 2019 – 2025
@@ -32,15 +31,25 @@ Conducted in `01_data_cleaning_and_eda.ipynb`, the EDA process includes:
 
 ---
 
-## 🧹 Data Cleaning Highlights
+## 🧹 Data Cleaning Process
 
 - Converted date to `datetime` format
-- Missing values imputed with `0` where appropriate
-- Non-active or niche transport modes (peak ridership < 50,000) flagged for removal
+- Rows with missing data due to inactive modes handled
+- Transport modes with consistently low ridership removed
+- A metadata table was created to log operation start dates and mode-specific inf
 
 ---
 
-## 📌 Key Findings
+## ⚒️ Data Transformation
+
+- Perform feature engineering by extracted time columns, `year`, `weekday`
+- Transport mode clustering
+- Discover relationship by scatterplot
+- Transformation dataset used for BI visualization
+
+---
+
+## 📉 Data Reduction Outcome
 
 - Ridership dropped by ~96% during the MCO (March 2020)
 - Highest ridership occurred on New Year’s Eve 2024
@@ -50,14 +59,22 @@ Conducted in `01_data_cleaning_and_eda.ipynb`, the EDA process includes:
 
 ---
 
-## 🧠 Planned Next Steps
+## Next Step
 
-- Data Reduction: Remove low-impact transport columns
-- Feature Engineering: Add new variables (e.g., weekend flag, moving averages)
-- Predictive Modeling: Forecast future ridership using time-series or ML methods
+- Conduct Predictive Modeling
+- Building BI Visualization
 
 ---
 
+## 🔎 Key Insights
+
+- ~96% drop during MCO (March 2020)
+- Weekend ridership is consistently lower across all modes
+- Urban rail ridership shows stable, predictable patterns
+- National rails and regional buses follow different trends
+- MRT Putrajaya has lower early correlation due to recent operation
+
+---
 ## 🛠 Tools Used
 
 - Python (Pandas, NumPy, Matplotlib, Seaborn)
@@ -76,6 +93,6 @@ Malaysia's growing urban population puts pressure on public transportation. By a
 
 ## 📬 Contact
 
-Created by [@weiiilunnnn](https://github.com/weiiilunnnn)
+Build by [@weiiilunnnn](https://github.com/weiiilunnnn)
 
-For questions, reach out via GitHub Issues or fork this repo!
+For questions, reach out via GitHub Issues or fork this project.
