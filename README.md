@@ -1,6 +1,6 @@
-# Malaysia Public Transport Ridership Analysis & Forecasting
+# Malaysia Public Transport Ridership - Descriptive Analysis
 
-This project focuses on analysing and predicting Malaysia's public transport ridership data using Python and Data Science Techniques witha clear pipeline from Data Cleaning and Exploratory Data Analysis (EDA) to Predictive Modeling and Business Intelligence (BI) visualization. The ultimate goal is to discovered usage patterns across MRT, LRT, Monorail, Buses, National Rail and build a predictive model for urbain rail ridership. The generated insights are visualized in Power BI dashboards to support decision-making for transport policy and planning.
+This project performs descriptive analysis on Malaysia's public transport ridership dataset using Python and Business Intelligence tools. The focus is on understanding past trends and summarizing ridership behavior across MRT, LRT, Monorail, Bus, and National Rail services from 2019–2025. Insights discovered help inform better transport policy planning and public service improvements.
 
 ---
 
@@ -15,23 +15,7 @@ This project focuses on analysing and predicting Malaysia's public transport rid
 
 ---
 
-## 🔍 Exploratory Data Analysis (EDA)
-
-Conducted in `01_data_cleaning_and_eda.ipynb`, the EDA process includes:
-
-- Data type correction and null handling
-- Total daily ridership trend analysis
-- Minimum and maximum ridership days identified
-- MCO (COVID-19 lockdown) impact quantified
-- Monthly average ridership breakdown by transport mode
-- Correlation matrix and clustering of transport modes:
-  - Urban rails (LRT, MRT) show strong positive correlation (~0.97)
-  - Bus services in different cities are also highly correlated
-  - National rail services form a separate behavioral group
-
----
-
-## 🧹 Data Cleaning Process
+## 🧹 Data Preparation
 
 - Converted date to `datetime` format
 - Rows with missing data due to inactive modes handled
@@ -49,30 +33,34 @@ Conducted in `01_data_cleaning_and_eda.ipynb`, the EDA process includes:
 
 ---
 
-## 📉 Data Reduction Outcome
+## 🔍 Descriptive Analysis Highlights
 
-- Ridership dropped by ~96% during the MCO (March 2020)
-- Highest ridership occurred on New Year’s Eve 2024
-- Strong correlations found among city-based public transport
-- MRT Kajang and MRT Putrajaya show similar behavior (~0.76 correlation)
-- Bus RKL and Bus RPN are the most correlated pair (~0.97)
-
----
-
-## Next Step
-
-- Conduct Predictive Modeling
-- Building BI Visualization
+- 96% ridership drop during COVID-19 MCO (March 2020)
+- New Year’s Eve 2024 recorded highest ridership across all modes
+- Weekend ridership is consistently lower than weekdays
+- Strong correlation found between MRT Kajang and MRT Putrajaya
+- Bus RKL and Bus RPN show the highest pairwise correlation (~0.97)
+- Monthly and weekday trends show stable patterns for urban rails
+- Correlation matrix & clustering show similar behavior across urban modes
 
 ---
 
-## 🔎 Key Insights
+## 📁 Data Versions
 
-- ~96% drop during MCO (March 2020)
-- Weekend ridership is consistently lower across all modes
-- Urban rail ridership shows stable, predictable patterns
-- National rails and regional buses follow different trends
-- MRT Putrajaya has lower early correlation due to recent operation
+- cleaned_data.csv: Fully cleaned, used for BI & reporting
+- transformed_data.csv: Includes added time features like year, weekday
+- reduced_data.csv: Certain low-usage transport modes removed for cleaner insights
+
+---
+
+## 🔎 Dashboard (Power BI)
+
+Created descriptive visuals showing:
+
+- Monthly & yearly ridership trend
+- Ridership comparison by transport mode
+- Impact of MCO and major public holidays
+- Correlation heatmap among different transport types
 
 ---
 ## 🛠 Tools Used
@@ -80,14 +68,13 @@ Conducted in `01_data_cleaning_and_eda.ipynb`, the EDA process includes:
 - Python (Pandas, NumPy, Matplotlib, Seaborn)
 - Jupyter Notebook
 - Power BI
-- Streamlit
-- Git & GitHub
+- Git & GitHub for version control
 
 ---
 
-## 💡 Motivation
+## 💡 Project Purpose
 
-Malaysia's growing urban population puts pressure on public transportation. By analyzing past usage and identifying behavioral trends, we aim to inform transport planning, scheduling, and infrastructure investment.
+With Malaysia’s increasing urbanization, public transport plays a key role in sustainable development. This descriptive analysis helps authorities and stakeholders understand how the system is used over time, especially in response to events like MCO, weekends, and festive seasons.
 
 ---
 
